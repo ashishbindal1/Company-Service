@@ -1,7 +1,32 @@
 print("Welcome to Bindal Group of Industries Pvt. Ltd.")
 print("Please press 1.)For Salary Collection & 2.)For other Servies")
-sc = input()
-x = int(sc)
+x=0
+while x==0:
+    sc=input()
+    c=len(sc)
+    while c!=1:
+        print("You have entered an invalid Service Input. Please Enter a valid Service Input")
+        print("Please enter 1.)For Salary Collection & 2.)For other Servies")
+        break
+    while c==1:
+        for ckr in sc:
+            try:
+                dr=int(ckr)
+                x=dr
+                c=0
+                if(x==0):
+                    print("You have entered an invalid Service Input. Please Enter a valid Service Input")
+                    print("Please enter 1.)For Salary Collection & 2.)For other Servies")
+            except:
+                c=0
+                print("You have entered an invalid Service Input. Please Enter a valid Service Input")
+                print("Please enter 1.)For Salary Collection & 2.)For other Servies")
+                break
+     while x>2:
+        x=0
+        print("You have entered an invalid Service Input. Please Enter a valid Service Input")
+        print("Please enter 1.)For Salary Collection & 2.)For other Servies")
+        break
 while x==1:
     print("To collect your Salary Plz follow the Instuctions...")
     print("Please Enter Your Name")
